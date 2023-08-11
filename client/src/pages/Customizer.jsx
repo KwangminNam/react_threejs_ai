@@ -34,17 +34,25 @@ export default function Customizer() {
           setFile={setFile}
           readFile={readFile}
         />
-      case 'aipicker' :
-        return <AIPicker/> 
+      // case 'aipicker' :
+      //   return <AIPicker
+      //     prompt={prompt}
+      //     setPrompt={setPrompt}
+      //     loading={generatingImg}
+      //     handleSubmit={handleSubmit}
+      //   /> 
       default:
         return null;
     }
   }
 
-  const handeDecals = (type,result) => {
-    const decalType = DecalTypes[type];
 
-    console.log(decalType)
+  const handleSubmit = async (type) => {
+    console.log(type);
+  }
+
+  const handleDecals = (type,result) => {
+    const decalType = DecalTypes[type];
 
     state[decalType.stateProperty] = result;
 
@@ -76,7 +84,7 @@ export default function Customizer() {
   const readFile = type => {
     reader(file)
     .then((result)=>{
-      handeDecals(type,result);
+      handleDecals(type,result);
       setActiveEditorTab("")
     })
   }
