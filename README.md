@@ -8,6 +8,9 @@ https://client-brown-mu.vercel.app/
 * tailwind
 * react-color ( 그림판 컬러 picker )
 
+## valito
+* proxy기반의 반응형데이터 관리
+
 ### Three.js / motion
 * React 로 three.js 맛보기
 * motion으로 animation 이용해보기
